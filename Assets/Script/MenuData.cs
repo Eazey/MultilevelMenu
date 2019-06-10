@@ -11,6 +11,16 @@ namespace EazeyFramework.UI
         public readonly int SortOrder;
         public Dictionary<int, MenuData> ChildsMap;
 
+        public int ChildCount
+        {
+            get
+            {
+                if (ChildsMap != null)
+                    return ChildsMap.Count;
+                return 0;
+            }
+        }
+
         public MenuData(int id, int sortOrder = -1, Dictionary<int, MenuData> childs = null)
         {
             DataId = id;

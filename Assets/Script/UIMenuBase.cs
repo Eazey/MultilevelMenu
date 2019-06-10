@@ -25,15 +25,7 @@ namespace EazeyFramework.UI
                 return;
             }
             _helper = helper;
-
-            DataParse();
         }
-
-
-        /// <summary>
-        /// 数据解析
-        /// </summary>
-        protected abstract void DataParse();
 
         public virtual void Enable()
         {

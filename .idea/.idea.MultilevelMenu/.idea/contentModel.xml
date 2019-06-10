@@ -13,6 +13,7 @@
           <e p="MenuInteractType.cs" t="Include" />
           <e p="MenuUtility.cs" t="Include" />
           <e p="UIMenuBase.cs" t="Include" />
+          <e p="UIMenuControl.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />
