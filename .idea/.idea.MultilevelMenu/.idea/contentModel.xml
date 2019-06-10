@@ -11,6 +11,7 @@
           <e p="MenuData.cs" t="Include" />
           <e p="MenuHelper.cs" t="Include" />
           <e p="MenuInteractType.cs" t="Include" />
+          <e p="MenuUtility.cs" t="Include" />
           <e p="UIMenuBase.cs" t="Include" />
         </e>
       </e>

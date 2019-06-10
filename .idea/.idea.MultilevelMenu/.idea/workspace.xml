@@ -90,21 +90,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/99258562-0D64-4271-98DD-F3A0E1467733/cc/a595ed65/List`1.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="586">
-              <caret line="118" column="16" selection-start-line="118" selection-start-column="16" selection-end-line="118" selection-end-column="16" />
-              <folding>
-                <marker date="1558939762281" expanded="true" signature="0:315" ph="/* Decompiled with JetBrains decompiler ... */" />
-                <marker date="1558939762281" expanded="true" signature="392:3862" ph="{...}" />
-                <marker date="1558939762281" expanded="true" signature="535:3860" ph="{...}" />
-                <marker date="1558939762281" expanded="true" signature="3675:3856" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Script/MenuInteractType.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="95">
@@ -122,8 +107,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Script/MenuData.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+            <state relative-caret-position="190">
+              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
               <folding>
                 <marker date="1560157495956" expanded="false" signature="6:52" ph="..." />
                 <marker date="1560157495956" expanded="true" signature="81:2389" ph="{...}" />
@@ -142,15 +127,6 @@
                 <marker date="1560157495956" expanded="true" signature="2113:2239" ph="{...}" />
                 <marker date="1560157495956" expanded="true" signature="2334:2381" ph="{...}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/99258562-0D64-4271-98DD-F3A0E1467733/c4/b9c79a32/Dictionary`2.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1476">
-              <caret line="177" column="65" selection-start-line="177" selection-start-column="65" selection-end-line="177" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -268,12 +244,12 @@
       <workItem from="1559553781407" duration="3112000" />
       <workItem from="1559618892896" duration="5793000" />
       <workItem from="1559737769095" duration="4180000" />
-      <workItem from="1560133941899" duration="8231000" />
+      <workItem from="1560133941899" duration="9072000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43354000" />
+    <option name="totallyTimeSpent" value="44195000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -285,7 +261,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="476" y="23" width="1067" height="838" extended-state="0" />
+    <frame x="476" y="23" width="1067" height="838" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.13222222" />
@@ -415,8 +391,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Script/MenuData.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+        <state relative-caret-position="190">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
           <folding>
             <marker date="1560157495956" expanded="false" signature="6:52" ph="..." />
             <marker date="1560157495956" expanded="true" signature="81:2389" ph="{...}" />
