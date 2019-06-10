@@ -24,7 +24,6 @@ namespace EazeyFramework.UI
                 Debug.LogError("The object of type 'MenuSeting' is null.");
                 return;
             }
-
             _helper = helper;
 
             DataParse();
@@ -36,8 +35,6 @@ namespace EazeyFramework.UI
         /// </summary>
         protected abstract void DataParse();
 
-        #region Menu Switch  菜单自身状态改变时处理
-
         public virtual void Enable()
         {
             IsSelect = true;
@@ -47,8 +44,6 @@ namespace EazeyFramework.UI
         {
             IsSelect = false;
         }
-
-        #endregion
 
         public int GetDataHash()
         {

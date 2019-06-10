@@ -8,12 +8,13 @@ namespace EazeyFramework.UI
         private const int BufferSize = 16;
 
         public readonly int DataId;
-        public readonly int sortOrder;
+        public readonly int SortOrder;
         public Dictionary<int, MenuData> ChildsMap;
 
-        public MenuData(int id, Dictionary<int, MenuData> childs = null)
+        public MenuData(int id, int sortOrder = -1, Dictionary<int, MenuData> childs = null)
         {
             DataId = id;
+            SortOrder = sortOrder;
             ChildsMap = childs;
         }
 
@@ -27,11 +28,6 @@ namespace EazeyFramework.UI
                 var child = new MenuData(dataId);
                 ChildsMap.Add(dataId, child);
             }
-            else
-            {
-                Debug.LogWarning("已存在id为" + dataId + "的对象");
-            }
-
         }
 
         public void AddGrandson(int childID, int dataId)
@@ -53,16 +49,18 @@ namespace EazeyFramework.UI
 
         public List<MenuData> GetChildList()
         {
-            List<MenuData> list = null;
-
             if (ChildsMap == null || ChildsMap.Count < 1)
-                return list;
+                return null;
 
-            list = new List<MenuData>(BufferSize);
-            for (var item = ChildsMap.Values.GetEnumerator(); item.MoveNext();)
+            List<MenuData> list = new List<MenuData>(BufferSize);
+            
+            using (var item = ChildsMap.Values.GetEnumerator())
             {
-                var child = item.Current;
-                list.Add(child);
+                while (item.MoveNext())
+                {
+                    var child = item.Current;
+                    list.Add(child);
+                }
             }
 
             return list;
@@ -70,16 +68,17 @@ namespace EazeyFramework.UI
 
         public List<int> GetChildIDList()
         {
-            List<int> list = null;
-
             if (ChildsMap == null || ChildsMap.Count < 1)
-                return list;
+                return null;
 
-            list = new List<int>(BufferSize);
-            for (var item = ChildsMap.Values.GetEnumerator(); item.MoveNext();)
+            List<int> list = new List<int>(BufferSize);
+            using (var item = ChildsMap.Values.GetEnumerator())
             {
-                var child = item.Current;
-                list.Add(child.DataId);
+                while (item.MoveNext())
+                {
+                    var child = item.Current;
+                    list.Add(child.DataId);
+                }   
             }
 
             return list;
