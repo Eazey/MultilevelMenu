@@ -1,4 +1,5 @@
 ﻿
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,18 +11,21 @@ namespace EazeyFramework.UI
         public UIMenuBase SubMenuPre;
         public Button ClickBtn;
 
-        protected MenuControlBase _control;
+        protected MenuData _data;
+        protected Action _onClickHandler;
 
         private void Awake()
         {
             ClickBtn = GetComponent<Button>();
+            ClickBtn.onClick.AddListener(OnBtnClick);
         }
 
-        public void SetControl(MenuControlBase control)
+        public void Init(MenuData data, Action onClickHandler)
         {
-            _control = control;
+            _data = data;
+            _onClickHandler = onClickHandler;
         }
-
+        
         public void InitUI()
         {
             
@@ -35,6 +39,12 @@ namespace EazeyFramework.UI
         public void Pressed()
         {
             
+        }
+
+        private void OnBtnClick()
+        {
+            if (_onClickHandler != null)
+                _onClickHandler();
         }
     }
 }

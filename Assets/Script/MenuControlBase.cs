@@ -18,33 +18,28 @@ namespace EazeyFramework.UI
         /// </summary>
         public bool IsSelect;
 
-
-        public MenuControlBase(MenuHelper helper, GameObject pre, Transform root)
-        {
-            if (helper == null)
-                throw new Exception("The object of type 'MenuSeting' is null.");
-
+        public MenuControlBase(UIMenuBase pre, Transform root)
+        {      
             if (pre == null)
                 throw new Exception("The prefabs is null");
 
             if (root == null)
                 throw new Exception("The root is null");
 
-            Init(helper, pre, root);
+            _uiMenu = Object.Instantiate(pre, root);
+//            _uiMenu.SetControl(this);
+//            _uiMenu.InitUI();
         }
         
         /// <summary>
         /// 初始化子列表
         /// </summary>
         /// <param name="helper"></param>
-        protected virtual void Init(MenuHelper helper, GameObject pre, Transform root)
+        public virtual void Init(MenuHelper helper)
         {
+            if (helper == null)
+                throw new Exception("The object of type 'MenuSeting' is null.");
             _helper = helper;
-
-            GameObject go = Object.Instantiate(pre, root);
-            _uiMenu = go.GetComponent<UIMenuBase>();
-            _uiMenu.SetControl(this);
-            _uiMenu.InitUI();
         }
 
         public void Enable()

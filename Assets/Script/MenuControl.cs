@@ -12,7 +12,7 @@ namespace EazeyFramework.UI
 		private UIMenuBase _subMenuPre;
 		
 		protected List<MenuData> _sortData;
-		protected List<MenuControlBase> _subMenus = new List<MenuControlBase>();
+		protected List<MenuControlBase> _subMenuCtrls = new List<MenuControlBase>();
 		protected List<UIMenuBase> _subUiMenus = new List<UIMenuBase>();
 
 		/// <summary>
@@ -25,18 +25,20 @@ namespace EazeyFramework.UI
 		/// </summary>
 		public int? CurActiveMenuHash { get; private set; }
 
-		public MenuControl(MenuHelper helper, GameObject pre, Transform root)
-			: base(helper, pre, root)
+		public MenuControl(UIMenuBase pre, Transform root)
+			: base( pre, root)
 		{
-			DataParse();
 		}
 
-		protected override void Init(MenuHelper helper, GameObject pre, Transform root)
+		public override void Init(MenuHelper helper)
 		{
-			base.Init(helper, pre, root);
+			base.Init(helper);
+			
 			_subMenuPre = _uiMenu.SubMenuPre;
 			if(_subMenuPre ==null)
 				throw new Exception("The submenu prefab is null.");
+
+			DataParse();
 		}
 		
 		protected void DataParse()
@@ -81,9 +83,9 @@ namespace EazeyFramework.UI
 		
 		protected virtual void ShowSubMenu()
 		{
-			if (_helper.Data.ChildCount - _subMenus.Count > 0)
+			if (_helper.Data.ChildCount - _subMenuCtrls.Count > 0)
 			{
-				CreateSubMenu(_helper.Data.ChildCount - _subMenus.Count);
+				CreateSubMenu(_helper.Data.ChildCount - _subMenuCtrls.Count);
 			}
 			// Show all menu
 			RefreshMenuRect();
@@ -100,14 +102,14 @@ namespace EazeyFramework.UI
 		{
 			for (int i = 0; i < addNum; i++)
 			{
-				var uiMenu = Object.Instantiate(_subMenuPre, _uiMenu.transform);
-				uiMenu.Reset();
-				_subUiMenus.Add(uiMenu);
+				var ctrls = new MenuControlBase(_uiMenu.SubMenuPre, _uiMenu.transform);
+				_subMenuCtrls.Add(ctrls);
 			}
 		}
 		
 		protected virtual void SetSubMenuData()
 		{
+			
 		}
 		
 		protected void ChoiceLastMenu()
@@ -115,7 +117,7 @@ namespace EazeyFramework.UI
 			bool existCur = false;
 			if (CurActiveMenuHash != null)
 			{
-				using(var item = _subMenus.GetEnumerator())
+				using(var item = _subMenuCtrls.GetEnumerator())
 				{
 					while (item.MoveNext())
 					{
@@ -139,7 +141,7 @@ namespace EazeyFramework.UI
 
 		protected void ChoiceMenu(int index)
 		{
-			MenuChange(_subMenus[index]);
+			MenuChange(_subMenuCtrls[index]);
 		}
 
 		protected virtual void MenuChange(MenuControlBase activeMenu)
