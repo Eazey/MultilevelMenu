@@ -3,13 +3,17 @@ using System;
 using System.Collections.Generic;
 using EazeyFramework.Utility;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace EazeyFramework.UI
 {
 	public class MenuControl : MenuControlBase
 	{
-		protected List<MenuData> _data;
+		private UIMenuBase _subMenuPre;
+		
+		protected List<MenuData> _sortData;
 		protected List<MenuControlBase> _subMenus = new List<MenuControlBase>();
+		protected List<UIMenuBase> _subUiMenus = new List<UIMenuBase>();
 
 		/// <summary>
 		/// 当前激活的子菜单
@@ -21,16 +25,18 @@ namespace EazeyFramework.UI
 		/// </summary>
 		public int? CurActiveMenuHash { get; private set; }
 
-		public override void Init(MenuHelper helper)
+		public MenuControl(MenuHelper helper, GameObject pre, Transform root)
+			: base(helper, pre, root)
 		{
-			base.Init(helper);
-			InitUI();
 			DataParse();
 		}
-		
-		protected virtual void InitUI()
+
+		protected override void Init(MenuHelper helper, GameObject pre, Transform root)
 		{
-			NormalUI();
+			base.Init(helper, pre, root);
+			_subMenuPre = _uiMenu.SubMenuPre;
+			if(_subMenuPre ==null)
+				throw new Exception("The submenu prefab is null.");
 		}
 		
 		protected void DataParse()
@@ -49,13 +55,13 @@ namespace EazeyFramework.UI
 
 		protected virtual void DoDataParse()
 		{
-			_data = _helper.Data.GetChildList();
-			MenuUtility.Sort(ref _data);
+			_sortData = _helper.Data.GetChildList();
+			MenuUtility.Sort(ref _sortData);
 		}
 
 		protected override void EnableDoSomething()
 		{
-			if (_data?.Count > 0)
+			if (_sortData?.Count > 0)
 			{
 				ShowSubMenu();
 				SetSubMenuData();
@@ -92,7 +98,12 @@ namespace EazeyFramework.UI
 
 		protected void CreateSubMenu(int addNum)
 		{
-			
+			for (int i = 0; i < addNum; i++)
+			{
+				var uiMenu = Object.Instantiate(_subMenuPre, _uiMenu.transform);
+				uiMenu.Reset();
+				_subUiMenus.Add(uiMenu);
+			}
 		}
 		
 		protected virtual void SetSubMenuData()

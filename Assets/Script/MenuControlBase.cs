@@ -1,10 +1,15 @@
 ﻿using System;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace EazeyFramework.UI
 { 
     public class MenuControlBase
     {
+        private Transform _uiMenuRoot;
+        private GameObject _uiMenuPre;
+
+        protected UIMenuBase _uiMenu;
         protected MenuHelper _helper;
         public MenuHelper Helper => _helper;
 
@@ -12,19 +17,34 @@ namespace EazeyFramework.UI
         /// 当前自身是否是选中状态
         /// </summary>
         public bool IsSelect;
+
+
+        public MenuControlBase(MenuHelper helper, GameObject pre, Transform root)
+        {
+            if (helper == null)
+                throw new Exception("The object of type 'MenuSeting' is null.");
+
+            if (pre == null)
+                throw new Exception("The prefabs is null");
+
+            if (root == null)
+                throw new Exception("The root is null");
+
+            Init(helper, pre, root);
+        }
         
         /// <summary>
         /// 初始化子列表
         /// </summary>
         /// <param name="helper"></param>
-        public virtual void Init(MenuHelper helper)
+        protected virtual void Init(MenuHelper helper, GameObject pre, Transform root)
         {
-            if (helper == null)
-            {
-                Debug.LogError("The object of type 'MenuSeting' is null.");
-                return;
-            }
             _helper = helper;
+
+            GameObject go = Object.Instantiate(pre, root);
+            _uiMenu = go.GetComponent<UIMenuBase>();
+            _uiMenu.SetControl(this);
+            _uiMenu.InitUI();
         }
 
         public void Enable()
@@ -40,10 +60,16 @@ namespace EazeyFramework.UI
             NormalUI();
             DisableDoSomething();
         }
-        
-        protected virtual void NormalUI(){}
-		
-        protected virtual void PressedUI(){}
+
+        protected void NormalUI()
+        {
+            _uiMenu.Normal();
+        }
+
+        protected void PressedUI()
+        {
+            _uiMenu.Pressed();
+        }
 
         protected virtual void EnableDoSomething()
         {

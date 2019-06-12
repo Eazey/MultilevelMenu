@@ -20,6 +20,24 @@ namespace EazeyFramework.Utility
                 list.Sort(Comparison);
             }
         }
+        
+        public static void Reset(this UIMenuBase uiMenu)
+        {
+            if (uiMenu == null)
+                return;
+            
+            Reset(uiMenu.transform);
+        }
+
+        public static void Reset(this Transform trans)
+        {
+            if (trans == null) 
+                return;
+
+            trans.localPosition = Vector3.zero;
+            trans.localRotation = Quaternion.identity;
+            trans.localScale = Vector3.one;
+        }
 
         private static int Comparison<T>(T itemA, T itemB)
             where T : MenuData

@@ -7,13 +7,34 @@ namespace EazeyFramework.UI
     [RequireComponent(typeof(UnityEngine.UI.Button))]
     public class UIMenuBase : MonoBehaviour
     {
+        public UIMenuBase SubMenuPre;
         public Button ClickBtn;
 
-        private MenuControlBase _control;
+        protected MenuControlBase _control;
 
         private void Awake()
         {
             ClickBtn = GetComponent<Button>();
+        }
+
+        public void SetControl(MenuControlBase control)
+        {
+            _control = control;
+        }
+
+        public void InitUI()
+        {
+            
+        }
+
+        public void Normal()
+        {
+            
+        }
+
+        public void Pressed()
+        {
+            
         }
     }
 }
