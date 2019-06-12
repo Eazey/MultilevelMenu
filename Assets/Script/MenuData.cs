@@ -7,7 +7,7 @@ namespace EazeyFramework.UI
     {
         private const int BufferSize = 16;
 
-        public readonly int DataId;
+        public readonly int Id;
         public readonly int SortOrder;
         public Dictionary<int, MenuData> ChildsMap;
 
@@ -23,7 +23,7 @@ namespace EazeyFramework.UI
 
         public MenuData(int id, int sortOrder = -1, Dictionary<int, MenuData> childs = null)
         {
-            DataId = id;
+            Id = id;
             SortOrder = sortOrder;
             ChildsMap = childs;
         }
@@ -87,7 +87,7 @@ namespace EazeyFramework.UI
                 while (item.MoveNext())
                 {
                     var child = item.Current;
-                    list.Add(child.DataId);
+                    list.Add(child.Id);
                 }   
             }
 
@@ -96,7 +96,7 @@ namespace EazeyFramework.UI
 
         public virtual int GetHashCode()
         {
-            return DataId;
+            return Id;
         }
     }
 }

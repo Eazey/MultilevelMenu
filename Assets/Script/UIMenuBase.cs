@@ -1,56 +1,19 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace EazeyFramework.UI
-{ 
-    public abstract class UIMenuBase
+{
+    [RequireComponent(typeof(UnityEngine.UI.Button))]
+    public class UIMenuBase : MonoBehaviour
     {
-        protected MenuHelper _helper;
-        public MenuHelper Helper => _helper;
+        public Button ClickBtn;
 
-        /// <summary>
-        /// 当前自身是否是选中状态
-        /// </summary>
-        public bool IsSelect;
+        private MenuControlBase _control;
 
-
-        /// <summary>
-        /// 初始化子列表
-        /// </summary>
-        /// <param name="helper"></param>
-        public virtual void Init(MenuHelper helper)
+        private void Awake()
         {
-            if (helper == null)
-            {
-                Debug.LogError("The object of type 'MenuSeting' is null.");
-                return;
-            }
-            _helper = helper;
-        }
-
-        public virtual void Enable()
-        {
-            IsSelect = true;
-        }
-
-        public virtual void Disable()
-        {
-            IsSelect = false;
-        }
-
-        public int GetDataHash()
-        {
-            return _helper.DataHash;
-        }
-
-        public bool Equals(UIMenuBase other)
-        {
-            bool result = false;
-            if (_helper != null && other._helper != null)
-            {
-                result = GetDataHash() == other.GetDataHash();
-            }
-
-            return result;
+            ClickBtn = GetComponent<Button>();
         }
     }
 }

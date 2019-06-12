@@ -22,12 +22,12 @@ namespace EazeyFramework.UI
         /// <summary>
         /// 【无子菜单】的选项 Enable时激活事件
         /// </summary>
-        public Delegate OptionClickCallback;
+        public Delegate OnEnableCallback;
 
         /// <summary>
         /// 选项触发方法
         /// </summary>
-        public Action<UIMenuBase> OnMenuChangeCallback;
+        public Action<MenuControlBase> OnMenuChangeCallback;
 
         /// <summary>
         /// 菜单选定时 所有菜单的切换类型
