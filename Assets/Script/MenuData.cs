@@ -40,20 +40,20 @@ namespace EazeyFramework.UI
             }
         }
 
-        public void AddGrandson(int childID, int dataId)
+        public void AddGrandson(int childId, int dataId)
         {
             if (ChildsMap == null)
                 ChildsMap = new Dictionary<int, MenuData>();
 
-            if (ChildsMap.ContainsKey(childID))
+            if (ChildsMap.ContainsKey(childId))
             {
-                var child = ChildsMap[childID];
+                var child = ChildsMap[childId];
                 child.AddChild(dataId);
             }
             else
             {
-                AddChild(childID);
-                AddGrandson(childID, dataId);
+                AddChild(childId);
+                AddGrandson(childId, dataId);
             }
         }
 
@@ -87,14 +87,15 @@ namespace EazeyFramework.UI
                 while (item.MoveNext())
                 {
                     var child = item.Current;
-                    list.Add(child.Id);
+                    if (child != null)
+                        list.Add(child.Id);
                 }   
             }
 
             return list;
         }
 
-        public virtual int GetHashCode()
+        public override int GetHashCode()
         {
             return Id;
         }
