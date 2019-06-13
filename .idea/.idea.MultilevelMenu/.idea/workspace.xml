@@ -12,17 +12,17 @@
     <session id="2014223209">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="14" />
           <entry key="project.open.time.0" value="4" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.16" value="2" />
           <entry key="project.open.time.169" value="1" />
-          <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.18" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.46" value="1" />
           <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -52,7 +52,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Script/MenuControlBase.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
+            <state relative-caret-position="703">
               <caret line="37" column="14" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="14" />
               <folding>
                 <marker date="1560345456495" expanded="true" signature="6:67" ph="..." />
@@ -82,10 +82,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Script/MenuControl.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="92" column="8" lean-forward="true" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
+            <state relative-caret-position="361">
+              <caret line="118" column="13" lean-forward="true" selection-start-line="118" selection-start-column="13" selection-end-line="118" selection-end-column="13" />
               <folding>
-                <marker date="1560345522552" expanded="true" signature="7:132" ph="..." />
+                <marker date="1560345522552" expanded="false" signature="7:132" ph="..." />
                 <marker date="1560345522552" expanded="true" signature="161:3309" ph="{...}" />
                 <marker date="1560345522552" expanded="true" signature="207:3307" ph="{...}" />
                 <marker date="1560345522552" expanded="true" signature="435:480" ph="/// 当前激活的子菜单 ... " />
@@ -124,11 +124,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Script/UIMenuBase.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
+            <state relative-caret-position="418">
               <caret line="22" column="14" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="14" />
               <folding>
                 <marker date="1560345277190" expanded="true" signature="7:55" ph="..." />
-                <marker date="1560345277190" expanded="true" signature="84:981" ph="{...}" />
                 <marker date="1560345277190" expanded="true" signature="184:979" ph="{...}" />
                 <marker date="1560345277190" expanded="true" signature="367:488" ph="{...}" />
                 <marker date="1560345277190" expanded="true" signature="552:644" ph="{...}" />
@@ -147,7 +146,6 @@
             <state relative-caret-position="323">
               <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
               <folding>
-                <marker date="1560308959328" expanded="true" signature="42:772" ph="{...}" />
                 <marker date="1560308959328" expanded="true" signature="49:102" ph="/// 菜单所需要的基础数据结构 ... " />
                 <marker date="1560308959328" expanded="true" signature="130:770" ph="{...}" />
                 <marker date="1560308959328" expanded="true" signature="176:244" ph="/// 数据的Hash码 用于确定数据是否改变 ... " />
@@ -192,7 +190,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Script/MenuUtility.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4">
+            <state relative-caret-position="76">
               <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
               <folding>
                 <marker date="1560337937873" expanded="false" signature="6:103" ph="..." />
@@ -216,19 +214,20 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/99258562-0D64-4271-98DD-F3A0E1467733/c4/b9c79a32/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CA9F80AC-8A05-4679-AFD3-0D068A4314C6/d3/76f680a5/BindingManagerBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/99258562-0D64-4271-98DD-F3A0E1467733/cc/a595ed65/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/MenuHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/MenuUtility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/29D15D32-74A8-45E0-BDA1-665455A698E2/d4/321316c4/ScriptableSingleton`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/MenuData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/MenuControl.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/99258562-0D64-4271-98DD-F3A0E1467733/c4/b9c79a32/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CA9F80AC-8A05-4679-AFD3-0D068A4314C6/d3/76f680a5/BindingManagerBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/MenuInteractType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/MenuData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/UIMenuBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/MenuControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C9CDEBC2-89AA-47CE-AD6F-B824D2D71DE8/f8/e1a0c7d8/AsyncReadManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/MenuControlBase.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -258,7 +257,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="478" />
     <option name="y" value="58" />
     <option name="width" value="1362" />
@@ -270,11 +269,11 @@
     </navigator>
     <panes>
       <pane id="FileSystemExplorer" />
-      <pane id="UnityExplorer">
-        <option name="show-hidden-items" value="false" />
-      </pane>
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="UnityExplorer">
+        <option name="show-hidden-items" value="false" />
       </pane>
     </panes>
   </component>
@@ -283,6 +282,8 @@
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/UnityProject/MultilevelMenu/Assets/Script/MenuUtility.cs&#10;Manager&#9;null&#9;null&#10;Singleton&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/GitHubDesktop/GitHubDesktop.exe" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -335,12 +336,13 @@
       <workItem from="1560133941899" duration="18171000" />
       <workItem from="1560220306363" duration="9895000" />
       <workItem from="1560306726014" duration="670000" />
-      <workItem from="1560307421338" duration="22428000" />
+      <workItem from="1560307421338" duration="23228000" />
+      <workItem from="1560393741828" duration="928000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86287000" />
+    <option name="totallyTimeSpent" value="88015000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -352,13 +354,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="478" y="58" width="1362" height="870" extended-state="0" />
+    <frame x="478" y="58" width="1362" height="870" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11981567" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12135176" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Build" weight="0.32988358" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.31505102" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -374,6 +375,7 @@
       <window_info anchor="bottom" id="Unit Tests" order="12" />
       <window_info anchor="bottom" id="Terminal" order="13" />
       <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="15" weight="0.32988358" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -445,10 +447,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Script/MenuBase.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Script/MenuBase.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Script/MenuControlBase.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="32" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="32" />
+        <state relative-caret-position="703">
+          <caret line="37" column="14" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="14" />
+          <folding>
+            <marker date="1560345456495" expanded="true" signature="6:67" ph="..." />
+            <marker date="1560345456495" expanded="true" signature="96:2494" ph="{...}" />
+            <marker date="1560345456495" expanded="true" signature="132:2492" ph="{...}" />
+            <marker date="1560345456495" expanded="true" signature="348:408" ph="/// 当前自身是否是选中状态 ... " />
+            <marker date="1560345456495" expanded="true" signature="502:831" ph="{...}" />
+            <marker date="1560345456495" expanded="true" signature="750:821" ph="/* _uiMenu.SetControl(this); ... */" />
+            <marker date="1560345456495" expanded="true" signature="849:946" ph="/// 初始化子列表 ... " />
+            <marker date="1560345456495" expanded="true" signature="998:1161" ph="{...}" />
+            <marker date="1560345456495" expanded="true" signature="1191:1298" ph="{...}" />
+            <marker date="1560345456495" expanded="true" signature="1329:1437" ph="{...}" />
+            <marker date="1560345456495" expanded="true" signature="1472:1522" ph="{...}" />
+            <marker date="1560345456495" expanded="true" signature="1558:1609" ph="{...}" />
+            <marker date="1560345456495" expanded="true" signature="1661:1713" ph="{...}" />
+            <marker date="1560345456495" expanded="true" signature="1766:1799" ph="{...}" />
+            <marker date="1560345456495" expanded="true" signature="1850:2114" ph="{...}" />
+            <marker date="1560345456495" expanded="true" signature="1911:2104" ph="{...}" />
+            <marker date="1560345456495" expanded="true" signature="2148:2205" ph="{...}" />
+            <marker date="1560345456495" expanded="true" signature="2256:2486" ph="{...}" />
+            <marker date="1560345456495" expanded="true" signature="2357:2448" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Script/UIMenuBase.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="14" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="14" />
+          <folding>
+            <marker date="1560345277190" expanded="true" signature="7:55" ph="..." />
+            <marker date="1560345277190" expanded="true" signature="184:979" ph="{...}" />
+            <marker date="1560345277190" expanded="true" signature="367:488" ph="{...}" />
+            <marker date="1560345277190" expanded="true" signature="552:644" ph="{...}" />
+            <marker date="1560345277190" expanded="true" signature="682:715" ph="{...}" />
+            <marker date="1560345277190" expanded="true" signature="745:778" ph="{...}" />
+            <marker date="1560345277190" expanded="true" signature="809:842" ph="{...}" />
+            <marker date="1560345277190" expanded="true" signature="877:973" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -457,7 +498,6 @@
         <state relative-caret-position="323">
           <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
           <folding>
-            <marker date="1560308959328" expanded="true" signature="42:772" ph="{...}" />
             <marker date="1560308959328" expanded="true" signature="49:102" ph="/// 菜单所需要的基础数据结构 ... " />
             <marker date="1560308959328" expanded="true" signature="130:770" ph="{...}" />
             <marker date="1560308959328" expanded="true" signature="176:244" ph="/// 数据的Hash码 用于确定数据是否改变 ... " />
@@ -498,7 +538,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Script/MenuUtility.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
+        <state relative-caret-position="76">
           <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
           <folding>
             <marker date="1560337937873" expanded="false" signature="6:103" ph="..." />
@@ -513,58 +553,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Script/UIMenuBase.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="22" column="14" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="14" />
-          <folding>
-            <marker date="1560345277190" expanded="true" signature="7:55" ph="..." />
-            <marker date="1560345277190" expanded="true" signature="84:981" ph="{...}" />
-            <marker date="1560345277190" expanded="true" signature="184:979" ph="{...}" />
-            <marker date="1560345277190" expanded="true" signature="367:488" ph="{...}" />
-            <marker date="1560345277190" expanded="true" signature="552:644" ph="{...}" />
-            <marker date="1560345277190" expanded="true" signature="682:715" ph="{...}" />
-            <marker date="1560345277190" expanded="true" signature="745:778" ph="{...}" />
-            <marker date="1560345277190" expanded="true" signature="809:842" ph="{...}" />
-            <marker date="1560345277190" expanded="true" signature="877:973" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Script/MenuControlBase.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="37" column="14" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="14" />
-          <folding>
-            <marker date="1560345456495" expanded="true" signature="6:67" ph="..." />
-            <marker date="1560345456495" expanded="true" signature="96:2494" ph="{...}" />
-            <marker date="1560345456495" expanded="true" signature="132:2492" ph="{...}" />
-            <marker date="1560345456495" expanded="true" signature="348:408" ph="/// 当前自身是否是选中状态 ... " />
-            <marker date="1560345456495" expanded="true" signature="502:831" ph="{...}" />
-            <marker date="1560345456495" expanded="true" signature="750:821" ph="/* _uiMenu.SetControl(this); ... */" />
-            <marker date="1560345456495" expanded="true" signature="849:946" ph="/// 初始化子列表 ... " />
-            <marker date="1560345456495" expanded="true" signature="998:1161" ph="{...}" />
-            <marker date="1560345456495" expanded="true" signature="1191:1298" ph="{...}" />
-            <marker date="1560345456495" expanded="true" signature="1329:1437" ph="{...}" />
-            <marker date="1560345456495" expanded="true" signature="1472:1522" ph="{...}" />
-            <marker date="1560345456495" expanded="true" signature="1558:1609" ph="{...}" />
-            <marker date="1560345456495" expanded="true" signature="1661:1713" ph="{...}" />
-            <marker date="1560345456495" expanded="true" signature="1766:1799" ph="{...}" />
-            <marker date="1560345456495" expanded="true" signature="1850:2114" ph="{...}" />
-            <marker date="1560345456495" expanded="true" signature="1911:2104" ph="{...}" />
-            <marker date="1560345456495" expanded="true" signature="2148:2205" ph="{...}" />
-            <marker date="1560345456495" expanded="true" signature="2256:2486" ph="{...}" />
-            <marker date="1560345456495" expanded="true" signature="2357:2448" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Script/MenuControl.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="92" column="8" lean-forward="true" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
+        <state relative-caret-position="361">
+          <caret line="118" column="13" lean-forward="true" selection-start-line="118" selection-start-column="13" selection-end-line="118" selection-end-column="13" />
           <folding>
-            <marker date="1560345522552" expanded="true" signature="7:132" ph="..." />
+            <marker date="1560345522552" expanded="false" signature="7:132" ph="..." />
             <marker date="1560345522552" expanded="true" signature="161:3309" ph="{...}" />
             <marker date="1560345522552" expanded="true" signature="207:3307" ph="{...}" />
             <marker date="1560345522552" expanded="true" signature="435:480" ph="/// 当前激活的子菜单 ... " />
