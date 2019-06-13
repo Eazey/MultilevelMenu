@@ -1,4 +1,5 @@
 ﻿using System;
+using EazeyFramework.Utility;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -27,6 +28,7 @@ namespace EazeyFramework.UI
                 throw new Exception("The root is null");
 
             _uiMenu = Object.Instantiate(pre, root);
+            _uiMenu.Reset();
 //            _uiMenu.SetControl(this);
 //            _uiMenu.InitUI();
         }

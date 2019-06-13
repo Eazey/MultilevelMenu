@@ -108,8 +108,26 @@ namespace EazeyFramework.UI
 		}
 		
 		protected virtual void SetSubMenuData()
+		{	
+			for (int i = 0; i < _sortData.Count; i++)
+			{
+				var data = _sortData[i];
+				var ctrl = _subMenuCtrls[i];
+
+				MenuHelper helper;
+				HelperConstruct(data, out helper);
+				ctrl.Init(helper);
+			}
+		}
+
+		protected virtual void HelperConstruct(MenuData data, out MenuHelper helper)
 		{
+			helper = new MenuHelper();
 			
+			helper.Data =  data;
+			helper.OnEnableCallback = _helper.OnEnableCallback;
+			helper.OnMenuChangeCallback = MenuChange;
+			helper.InteractType = _helper.InteractType;
 		}
 		
 		protected void ChoiceLastMenu()
