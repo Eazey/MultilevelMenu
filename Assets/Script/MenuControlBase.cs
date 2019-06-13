@@ -29,6 +29,8 @@ namespace EazeyFramework.UI
 
             _uiMenu = Object.Instantiate(pre, root);
             _uiMenu.Reset();
+
+            _uiMenu.Init(_helper.Data, OnEnableResponse);
 //            _uiMenu.SetControl(this);
 //            _uiMenu.InitUI();
         }
@@ -70,7 +72,7 @@ namespace EazeyFramework.UI
 
         protected virtual void EnableDoSomething()
         {
-            OnEnableCallback();
+            ExcuteEnableCb();
         }
 
         protected virtual void DisableDoSomething()
@@ -78,7 +80,12 @@ namespace EazeyFramework.UI
             
         }
 
-        protected virtual void OnEnableCallback()
+        protected virtual void OnEnableResponse()
+        {
+            _helper.OnMenuChangeHandler(this);
+        }
+
+        protected virtual void ExcuteEnableCb()
         {
             if (_helper?.OnEnableCallback != null)
             {

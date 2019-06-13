@@ -71,7 +71,7 @@ namespace EazeyFramework.UI
 			}
 			else
 			{
-				OnEnableCallback();
+				ExcuteEnableCb();
 			}
 		}
 
@@ -126,10 +126,31 @@ namespace EazeyFramework.UI
 			
 			helper.Data =  data;
 			helper.OnEnableCallback = _helper.OnEnableCallback;
-			helper.OnMenuChangeCallback = MenuChange;
+			helper.OnMenuChangeHandler = OnSubMenuChange;
 			helper.InteractType = _helper.InteractType;
 		}
+
+		protected override void OnEnableResponse()
+		{
+			if (IsSelect)
+			{
+				if ((_helper.InteractType & MenuInteractType.Repete) > 0)
+				{
+					RepeteEnable();
+				}
+			}
+			else
+			{
+				_helper.OnMenuChangeHandler(this);
+			}
+		}
 		
+		protected virtual void RepeteEnable()
+		{
+			if (_subMenuCtrls.Count <= 0)
+				return;
+		}
+
 		protected void ChoiceLastMenu()
 		{
 			bool existCur = false;
@@ -145,7 +166,7 @@ namespace EazeyFramework.UI
 
 						if (CurActiveMenuHash == menu.GetDataHash())
 						{
-							MenuChange(menu);
+							OnSubMenuChange(menu);
 							existCur = true;
 							break;
 						}
@@ -159,10 +180,10 @@ namespace EazeyFramework.UI
 
 		protected void ChoiceMenu(int index)
 		{
-			MenuChange(_subMenuCtrls[index]);
+			OnSubMenuChange(_subMenuCtrls[index]);
 		}
 
-		protected virtual void MenuChange(MenuControlBase activeMenu)
+		protected virtual void OnSubMenuChange(MenuControlBase activeMenu)
 		{
 			if (CurActiveMenu != null 
 			    && (CurActiveMenu.Helper.InteractType & MenuInteractType.Exclusive) > 0)

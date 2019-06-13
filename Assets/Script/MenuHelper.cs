@@ -25,9 +25,9 @@ namespace EazeyFramework.UI
         public Delegate OnEnableCallback;
 
         /// <summary>
-        /// 选项触发方法
+        /// 切换子菜单
         /// </summary>
-        public Action<MenuControlBase> OnMenuChangeCallback;
+        public Action<MenuControlBase> OnMenuChangeHandler;
 
         /// <summary>
         /// 菜单选定时 所有菜单的切换类型
