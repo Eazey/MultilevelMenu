@@ -7,10 +7,10 @@ namespace EazeyFramework.UI
 { 
     public class MenuControlBase
     {
-        private Transform _uiMenuRoot;
-        private GameObject _uiMenuPre;
-
-        protected UIMenuBase _uiMenu;
+        protected GameObject gameObject { get; }
+        protected Transform transform { get; }
+        
+        protected IMenuView _uiMenu;
         protected MenuHelper _helper;
         public MenuHelper Helper => _helper;
 
@@ -19,7 +19,7 @@ namespace EazeyFramework.UI
         /// </summary>
         public bool IsSelect;
 
-        public MenuControlBase(UIMenuBase pre, Transform root)
+        public MenuControlBase(GameObject pre, Transform root)
         {      
             if (pre == null)
                 throw new Exception("The prefabs is null");
@@ -27,10 +27,11 @@ namespace EazeyFramework.UI
             if (root == null)
                 throw new Exception("The root is null");
 
-            _uiMenu = Object.Instantiate(pre, root);
-            _uiMenu.Reset();
+            gameObject = Object.Instantiate(pre, root);
+            transform = gameObject.transform;
 
-            _uiMenu.Init(_helper.Data, OnEnableResponse);
+            _uiMenu = gameObject.GetComponent<IMenuView>();
+            _uiMenu?.Init(_helper.Data, OnEnableResponse);
 //            _uiMenu.SetControl(this);
 //            _uiMenu.InitUI();
         }
@@ -62,12 +63,12 @@ namespace EazeyFramework.UI
 
         protected void NormalUI()
         {
-            _uiMenu.Normal();
+            _uiMenu.NormalView();
         }
 
         protected void PressedUI()
         {
-            _uiMenu.Pressed();
+            _uiMenu.PressedView();
         }
 
         protected virtual void EnableDoSomething()

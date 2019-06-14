@@ -1,50 +1,35 @@
 ﻿
 using System;
+using EazeyFramework.Utility;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace EazeyFramework.UI
 {
-    [RequireComponent(typeof(UnityEngine.UI.Button))]
-    public class UIMenuBase : MonoBehaviour
+    [RequireComponent(typeof(Button))]
+    public class UIMenuBase : MonoBehaviour, IMenuView
     {
-        public UIMenuBase SubMenuPre;
-        public Button ClickBtn;
+        public GameObject SubMenuPre;
 
-        protected MenuData _data;
-        protected Action _onClickHandler;
+        public MenuData Data { get; set; }
+        public MenuClick Click { get; set; }
 
-        private void Awake()
+        public void Init(MenuData data, Action clickCb)
         {
-            ClickBtn = GetComponent<Button>();
-            ClickBtn.onClick.AddListener(OnBtnClick);
+            Data = data;
+            Click = new MenuClick(GetComponent<Button>(), clickCb);
+
+            this.Reset();
         }
 
-        public void Init(MenuData data, Action onClickHandler)
-        {
-            _data = data;
-            _onClickHandler = onClickHandler;
-        }
-        
-        public void InitUI()
+        public void NormalView()
         {
             
         }
 
-        public void Normal()
+        public void PressedView()
         {
             
-        }
-
-        public void Pressed()
-        {
-            
-        }
-
-        private void OnBtnClick()
-        {
-            if (_onClickHandler != null)
-                _onClickHandler();
         }
     }
 }

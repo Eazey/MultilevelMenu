@@ -9,7 +9,7 @@ namespace EazeyFramework.UI
 {
 	public class MenuControl : MenuControlBase
 	{
-		private UIMenuBase _subMenuPre;
+		private GameObject _subMenuPre;
 		
 		protected List<MenuData> _sortData;
 		protected List<MenuControlBase> _subMenuCtrls = new List<MenuControlBase>();
@@ -25,19 +25,18 @@ namespace EazeyFramework.UI
 		/// </summary>
 		public int? CurActiveMenuHash { get; private set; }
 
-		public MenuControl(UIMenuBase pre, Transform root)
-			: base( pre, root)
+		public MenuControl(GameObject pre, Transform root)
+			: base(pre, root)
 		{
+			var contains = gameObject.GetComponent<IContainSubMenu>();
+			_subMenuPre = contains?.SubMenuPre;
+			if (_subMenuPre == null)
+				throw new Exception("The subMenu prefab is null.");
 		}
 
 		public override void Init(MenuHelper helper)
 		{
 			base.Init(helper);
-			
-			_subMenuPre = _uiMenu.SubMenuPre;
-			if(_subMenuPre ==null)
-				throw new Exception("The submenu prefab is null.");
-
 			DataParse();
 		}
 		
@@ -102,7 +101,7 @@ namespace EazeyFramework.UI
 		{
 			for (int i = 0; i < addNum; i++)
 			{
-				var ctrls = new MenuControlBase(_uiMenu.SubMenuPre, _uiMenu.transform);
+				var ctrls = new MenuControlBase(_subMenuPre, transform);
 				_subMenuCtrls.Add(ctrls);
 			}
 		}
