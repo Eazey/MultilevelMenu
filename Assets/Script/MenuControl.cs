@@ -13,7 +13,6 @@ namespace EazeyFramework.UI
 		
 		protected List<MenuData> _sortData;
 		protected List<MenuControlBase> _subMenuCtrls = new List<MenuControlBase>();
-		protected List<UIMenuBase> _subUiMenus = new List<UIMenuBase>();
 
 		/// <summary>
 		/// 当前激活的子菜单
@@ -28,7 +27,7 @@ namespace EazeyFramework.UI
 		public MenuControl(GameObject pre, Transform root)
 			: base(pre, root)
 		{
-			var contains = gameObject.GetComponent<IContainSubMenu>();
+			var contains = _uiMenu.gameObject.GetComponent<IContainSubMenu>();
 			_subMenuPre = contains?.SubMenuPre;
 			if (_subMenuPre == null)
 				throw new Exception("The subMenu prefab is null.");
@@ -101,7 +100,7 @@ namespace EazeyFramework.UI
 		{
 			for (int i = 0; i < addNum; i++)
 			{
-				var ctrls = new MenuControlBase(_subMenuPre, transform);
+				var ctrls = new MenuControlBase(_subMenuPre, _uiMenu.transform);
 				_subMenuCtrls.Add(ctrls);
 			}
 		}

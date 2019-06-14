@@ -7,10 +7,8 @@ namespace EazeyFramework.UI
 { 
     public class MenuControlBase
     {
-        protected GameObject gameObject { get; }
-        protected Transform transform { get; }
-        
         protected IMenuView _uiMenu;
+        
         protected MenuHelper _helper;
         public MenuHelper Helper => _helper;
 
@@ -27,13 +25,10 @@ namespace EazeyFramework.UI
             if (root == null)
                 throw new Exception("The root is null");
 
-            gameObject = Object.Instantiate(pre, root);
-            transform = gameObject.transform;
+            var go = Object.Instantiate(pre, root);
 
-            _uiMenu = gameObject.GetComponent<IMenuView>();
+            _uiMenu = go.GetComponent<IMenuView>();
             _uiMenu?.Init(_helper.Data, OnEnableResponse);
-//            _uiMenu.SetControl(this);
-//            _uiMenu.InitUI();
         }
         
         /// <summary>

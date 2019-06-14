@@ -20,14 +20,6 @@ namespace EazeyFramework.Utility
                 list.Sort(Comparison);
             }
         }
-        
-        public static void Reset(this UIMenuBase uiMenu)
-        {
-            if (uiMenu == null)
-                return;
-            
-            Reset(uiMenu.transform);
-        }
 
         public static void Reset(this Transform trans)
         {

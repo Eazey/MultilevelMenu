@@ -7,9 +7,10 @@ using UnityEngine.UI;
 namespace EazeyFramework.UI
 {
     [RequireComponent(typeof(Button))]
-    public class UIMenuBase : MonoBehaviour, IMenuView
+    public class UIMenuBase : MonoBehaviour, IMenuView, IContainSubMenu
     {
-        public GameObject SubMenuPre;
+        [SerializeField] private GameObject _subMenuPre;
+        public GameObject SubMenuPre { get; set; }
 
         public MenuData Data { get; set; }
         public MenuClick Click { get; set; }
@@ -19,17 +20,17 @@ namespace EazeyFramework.UI
             Data = data;
             Click = new MenuClick(GetComponent<Button>(), clickCb);
 
-            this.Reset();
+            transform.Reset();
         }
 
         public void NormalView()
         {
-            
+
         }
 
         public void PressedView()
         {
-            
+
         }
     }
 }

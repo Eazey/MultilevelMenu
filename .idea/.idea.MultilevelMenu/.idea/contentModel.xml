@@ -8,14 +8,18 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Script" t="Include">
-          <e p="IMenuView.cs" t="Include" />
-          <e p="ISubMenu.cs" t="Include" />
+          <e p="Enum" t="Include">
+            <e p="MenuInteractType.cs" t="Include" />
+          </e>
+          <e p="Interface" t="Include">
+            <e p="IContainSubMenu.cs" t="Include" />
+            <e p="IMenuView.cs" t="Include" />
+          </e>
           <e p="MenuClick.cs" t="Include" />
           <e p="MenuControl.cs" t="Include" />
           <e p="MenuControlBase.cs" t="Include" />
           <e p="MenuData.cs" t="Include" />
           <e p="MenuHelper.cs" t="Include" />
-          <e p="MenuInteractType.cs" t="Include" />
           <e p="MenuUtility.cs" t="Include" />
           <e p="UIMenuBase.cs" t="Include" />
         </e>
