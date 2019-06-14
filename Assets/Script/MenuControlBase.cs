@@ -7,7 +7,7 @@ namespace EazeyFramework.UI
 { 
     public class MenuControlBase
     {
-        protected IMenuView _uiMenu;
+        protected MenuViewBase _uiMenu;
         
         protected MenuHelper _helper;
         public MenuHelper Helper => _helper;
@@ -27,8 +27,9 @@ namespace EazeyFramework.UI
 
             var go = Object.Instantiate(pre, root);
 
-            _uiMenu = go.GetComponent<IMenuView>();
-            _uiMenu?.Init(_helper.Data, OnEnableResponse);
+            _uiMenu = go.GetComponent<MenuViewBase>();
+            if (_uiMenu != null)
+                _uiMenu.Init(_helper.Data, OnEnableResponse);
         }
         
         /// <summary>
@@ -58,12 +59,14 @@ namespace EazeyFramework.UI
 
         protected void NormalUI()
         {
-            _uiMenu.NormalView();
+            IMenuView view = _uiMenu as IMenuView;
+            view?.NormalView();
         }
 
         protected void PressedUI()
         {
-            _uiMenu.PressedView();
+            IMenuView view = _uiMenu as IMenuView;
+            view?.PressedView();
         }
 
         protected virtual void EnableDoSomething()

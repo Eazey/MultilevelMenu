@@ -356,7 +356,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 100}
+  m_AnchoredPosition: {x: 0, y: 117}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &305260963
@@ -371,6 +371,7 @@ GameObject:
   - component: {fileID: 305260966}
   - component: {fileID: 305260965}
   - component: {fileID: 305260964}
+  - component: {fileID: 305260968}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -458,6 +459,14 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!222 &305260968
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305260963}
+  m_CullTransparentMesh: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,7 +737,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1665090861}
   m_HandleRect: {fileID: 1665090860}
   m_Direction: 2
-  m_Value: 0.14529915
+  m_Value: 0
   m_Size: 0.61
   m_NumberOfSteps: 0
   m_OnValueChanged:

@@ -12,16 +12,18 @@
             <e p="MenuInteractType.cs" t="Include" />
           </e>
           <e p="Interface" t="Include">
-            <e p="IContainSubMenu.cs" t="Include" />
             <e p="IMenuView.cs" t="Include" />
           </e>
-          <e p="MenuClick.cs" t="Include" />
           <e p="MenuControl.cs" t="Include" />
           <e p="MenuControlBase.cs" t="Include" />
           <e p="MenuData.cs" t="Include" />
           <e p="MenuHelper.cs" t="Include" />
           <e p="MenuUtility.cs" t="Include" />
-          <e p="UIMenuBase.cs" t="Include" />
+          <e p="View" t="Include">
+            <e p="MenuDrawerViewBase.cs" t="Include" />
+            <e p="MenuOptionViewBase.cs" t="Include" />
+            <e p="MenuViewBase.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />

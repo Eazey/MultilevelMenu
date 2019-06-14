@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using EazeyFramework.Utility;
 using UnityEngine;
-using Object = UnityEngine.Object;
+using UnityEngine.UI;
 
 namespace EazeyFramework.UI
 {
@@ -27,8 +27,10 @@ namespace EazeyFramework.UI
 		public MenuControl(GameObject pre, Transform root)
 			: base(pre, root)
 		{
-			var contains = _uiMenu.gameObject.GetComponent<IContainSubMenu>();
-			_subMenuPre = contains?.SubMenuPre;
+			var drawer = _uiMenu.gameObject.GetComponent<MenuDrawerViewBase>();
+			if (drawer != null)
+				_subMenuPre = drawer.SubMenuPre;
+					
 			if (_subMenuPre == null)
 				throw new Exception("The subMenu prefab is null.");
 		}
@@ -85,13 +87,13 @@ namespace EazeyFramework.UI
 			{
 				CreateSubMenu(_helper.Data.ChildCount - _subMenuCtrls.Count);
 			}
-			// Show all menu
+			//TODO Show all menu
 			RefreshMenuRect();
 		}
 		
 		protected virtual void HideMenuOption()
 		{
-			// Hide all menu
+			//TODO Hide all menu
 			RefreshMenuRect();
 		}
 
@@ -147,6 +149,8 @@ namespace EazeyFramework.UI
 		{
 			if (_subMenuCtrls.Count <= 0)
 				return;
+			
+			//TODO 
 		}
 
 		protected void ChoiceLastMenu()
@@ -204,7 +208,7 @@ namespace EazeyFramework.UI
 		/// </summary>
 		protected void RefreshMenuRect()
 		{
-			//LayoutRebuilder.ForceRebuildLayoutImmediate();
+			LayoutRebuilder.ForceRebuildLayoutImmediate(_uiMenu.LayoutRoot);
 		}
 	}
 }
