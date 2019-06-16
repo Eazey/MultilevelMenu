@@ -78,7 +78,8 @@ namespace EazeyFramework.UI
 		
 		protected override void DisableDoSomething()
 		{
-			HideMenuOption();
+			//TODO 后续版本尝试做同级Item的回收机制
+			HideSubMenu();
 		}
 		
 		protected virtual void ShowSubMenu()
@@ -87,16 +88,37 @@ namespace EazeyFramework.UI
 			{
 				CreateSubMenu(_helper.Data.ChildCount - _subMenuCtrls.Count);
 			}
-			//TODO Show all menu
-			RefreshMenuRect();
+			ShowAllSubMenu();
 		}
-		
-		protected virtual void HideMenuOption()
+
+		protected virtual void HideSubMenu()
 		{
-			//TODO Hide all menu
+			if (_subMenuCtrls.Count > 0)
+			{
+				HideAllSubMenu();
+			}
+		}
+
+		protected virtual void ShowAllSubMenu()
+		{
+			//根据数据的数量来决定显示的菜单
+			for (int i = 0; i < _sortData.Count; i++)
+			{
+				var subMenu = _subMenuCtrls[i];
+				subMenu.SetVisible(true);
+			}
 			RefreshMenuRect();
 		}
 
+		protected virtual void HideAllSubMenu()
+		{
+			for (int i = 0; i < _subMenuCtrls.Count; i++)
+			{
+				var subMenu = _subMenuCtrls[i];
+				subMenu.SetVisible(false);
+			}
+			RefreshMenuRect();
+		}
 
 		protected void CreateSubMenu(int addNum)
 		{
@@ -136,7 +158,7 @@ namespace EazeyFramework.UI
 			{
 				if ((_helper.InteractType & MenuInteractType.Repete) > 0)
 				{
-					RepeteEnable();
+					RepeatEnable();
 				}
 			}
 			else
@@ -145,12 +167,13 @@ namespace EazeyFramework.UI
 			}
 		}
 		
-		protected virtual void RepeteEnable()
+		protected virtual void RepeatEnable()
 		{
 			if (_subMenuCtrls.Count <= 0)
 				return;
 			
-			//TODO 
+			IRepeatMenu iRepeatMenu = _uiMenu as IRepeatMenu;
+			iRepeatMenu?.Fold(!iRepeatMenu.isFold);
 		}
 
 		protected void ChoiceLastMenu()

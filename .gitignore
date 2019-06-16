@@ -36,3 +36,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+.idea/.idea.MultilevelMenu/.idea/workspace.xml
+.idea/.idea.MultilevelMenu/.idea/contentModel.xml
+Packages/manifest.json
+Logs/Packages-Update.log

@@ -39,6 +39,11 @@ namespace EazeyFramework.UI
             
             transform.Reset();
         }
+        
+        public void SetVisible(bool value)
+        {
+            gameObject.SetActiceEx(value);
+        }
 
         private void OnMenuClick()
         {

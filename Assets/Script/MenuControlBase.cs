@@ -94,6 +94,11 @@ namespace EazeyFramework.UI
             }
         }
 
+        public void SetVisible(bool value)
+        {
+            _uiMenu.SetVisible(value);
+        }
+
         public int GetDataHash()
         {
             return _helper.DataHash;
