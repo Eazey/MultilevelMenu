@@ -34,7 +34,13 @@ namespace EazeyFramework.Utility
 
             return result;
         }
-        
+
+        public static void CreateMenu<T>(int add, GameObject go, Transform root, MenuHelper helper)
+            where T : MenuControlBase
+        {
+            
+        }
+
         public static void Reset(this Transform trans)
         {
             if (trans == null) 

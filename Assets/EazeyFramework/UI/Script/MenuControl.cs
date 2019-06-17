@@ -24,23 +24,22 @@ namespace EazeyFramework.UI
 		/// </summary>
 		public int? CurActiveMenuHash { get; private set; }
 
-		public MenuControl(GameObject pre, Transform root)
-			: base(pre, root)
+		public MenuControl():base(){}
+
+		public override void Init(GameObject pre, Transform root, MenuHelper helper)
 		{
+			base.Init(pre, root, helper);
+			
 			var drawer = _uiMenu.gameObject.GetComponent<MenuDrawerViewBase>();
 			if (drawer != null)
 				_subMenuPre = drawer.SubMenuPre;
-					
+
 			if (_subMenuPre == null)
 				throw new Exception("The subMenu prefab is null.");
-		}
 
-		public override void Init(MenuHelper helper)
-		{
-			base.Init(helper);
 			DataParse();
 		}
-		
+
 		protected void DataParse()
 		{
 			if (_helper.Data == null)
@@ -86,7 +85,7 @@ namespace EazeyFramework.UI
 		{
 			if (_helper.Data.ChildCount - _subMenuCtrls.Count > 0)
 			{
-				CreateSubMenu(_helper.Data.ChildCount - _subMenuCtrls.Count);
+				CreateSubMenuCtrl(_helper.Data.ChildCount - _subMenuCtrls.Count);
 			}
 			ShowAllSubMenu();
 		}
@@ -120,11 +119,12 @@ namespace EazeyFramework.UI
 			RefreshMenuRect();
 		}
 
-		protected void CreateSubMenu(int addNum)
+		protected void CreateSubMenuCtrl(int addNum)
 		{
 			for (int i = 0; i < addNum; i++)
 			{
-				var ctrls = new MenuControlBase(_subMenuPre, _uiMenu.transform);
+				//TODO 这里有问题   想办法处理子菜单类型
+				var ctrls = new MenuControlBase();
 				_subMenuCtrls.Add(ctrls);
 			}
 		}
@@ -138,7 +138,8 @@ namespace EazeyFramework.UI
 
 				MenuHelper helper;
 				HelperConstruct(data, out helper);
-				ctrl.Init(helper);
+
+				ctrl.Init(_subMenuPre, _uiMenu.transform, helper);
 			}
 		}
 
